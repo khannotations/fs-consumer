@@ -13,8 +13,7 @@
         <ion-col size-md="6" offset-md="3" size-lg="3" offset-lg="4">
           <div class="ion-text-center">
             <h2>Please log in</h2>
-            <ion-label [hidden]="!error" color="danger">Incorrect username or password!</ion-label>
-            <ion-input placeholder="Email" [(ngModel)]="username"></ion-input>
+            <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
             <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
             <ion-button expand="block" (click)="login()">
               <ion-icon slot="start" name="contact"></ion-icon>

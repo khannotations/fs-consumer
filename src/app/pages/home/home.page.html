@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-float-left">
+      iX Airbnb
+    </ion-title>
+    <ion-item class="ion-float-right">
+      Hi, {{currentUser.firstName}}
+      &nbsp;
+      <img [src]="currentUser.image_url" alt="" style="height: 50px;">
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let property of properties" >
+          <ion-item [routerLink]="['/property', property.id]">
+            <img [src]="property.image_url" alt="">
+            <h3>{{property.name}} ({{property.id}})</h3>
+            <br>
+            <p style="color: #444; font-style: italic">
+              ${{property.price}}
+            </p>
+          </ion-item>  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
